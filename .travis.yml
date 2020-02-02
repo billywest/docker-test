@@ -7,7 +7,7 @@ script:
   - docker images sirwest/node
 
 before_deploy:
-  - docker login -u <sirwest> -p <Bwsxdcftest-*/123>
+  - docker login -u sirwest -p Bwsxdcftest-*/123
 
 deploy:
   provider: script
