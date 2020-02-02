@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t sirwest/node .
   - docker images sirwest/node
+
+before_deploy:
+  - docker login -u <sirwest> -p <Bwsxdcftest-*/123>
+
+deploy:
+  provider: script
+  script: docker push sirwest/node
+  on:
+    branch: master
